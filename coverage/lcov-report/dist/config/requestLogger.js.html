@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/config/requestLogger.ts</title>
+    <title>Code coverage report for dist/config/requestLogger.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/config</a> requestLogger.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">dist/config</a> requestLogger.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15.38% </span>
+                <span class="strong">26.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/13</span>
+                <span class='fraction'>4/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15.38% </span>
+                <span class="strong">26.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/13</span>
+                <span class='fraction'>4/15</span>
             </div>
         
             
@@ -93,8 +93,9 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -102,31 +103,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Request, Response, NextFunction } from 'express';
-&nbsp;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.onError = exports.requestLogger = void 0;
 /**
   Logs the incoming requests and outgoing responses of the application to the console.
   This middleware function should be mounted to the Express application using app.use()
@@ -134,36 +133,34 @@
   The logged information includes the request method, path, request body (if any), query parameters (if any),
   and the response status code.
 */
-export function <span class="fstat-no" title="function not covered" >requestLogger(</span>req: Request, res: Response, next: NextFunction) {
-<span class="cstat-no" title="statement not covered" >  res.once("finish", <span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
-    const log = <span class="cstat-no" title="statement not covered" >[req.method, req.path];</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (req.body &amp;&amp; Object.keys(req.body).length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >      log.push(JSON.stringify(req.body));</span>
-    }
-&nbsp;
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (req.query &amp;&amp; Object.keys(req.query).length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >      log.push(JSON.stringify(req.query));</span>
-    }
-&nbsp;
-<span class="cstat-no" title="statement not covered" >    log.push("-&gt;", String(res.statusCode));</span>
-<span class="cstat-no" title="statement not covered" >    console.log(log.join(" "));</span>
-  });
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  next();</span>
+function <span class="fstat-no" title="function not covered" >requestLogger(</span>req, res, next) {
+<span class="cstat-no" title="statement not covered" >    res.once("finish", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+        const log = <span class="cstat-no" title="statement not covered" >[req.method, req.path];</span>
+<span class="cstat-no" title="statement not covered" >        if (req.body &amp;&amp; Object.keys(req.body).length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            log.push(JSON.stringify(req.body));</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (req.query &amp;&amp; Object.keys(req.query).length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            log.push(JSON.stringify(req.query));</span>
+        }
+<span class="cstat-no" title="statement not covered" >        log.push("-&gt;", String(res.statusCode));</span>
+<span class="cstat-no" title="statement not covered" >        console.log(log.join(" "));</span>
+    });
+<span class="cstat-no" title="statement not covered" >    next();</span>
 }
-&nbsp;
-export function <span class="fstat-no" title="function not covered" >onError(</span>error: any) {
-<span class="cstat-no" title="statement not covered" >  console.error(`Failed to start server:\n${error.stack}`);</span>
-<span class="cstat-no" title="statement not covered" >  process.exit(1);</span>
-}</pre></td></tr></table></pre>
+exports.requestLogger = requestLogger;
+function <span class="fstat-no" title="function not covered" >onError(</span>error) {
+<span class="cstat-no" title="statement not covered" >    console.error(`Failed to start server:\n${error.stack}`);</span>
+<span class="cstat-no" title="statement not covered" >    process.exit(1);</span>
+}
+exports.onError = onError;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-08-27T20:04:36.462Z
+                at 2024-08-27T20:04:21.363Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
