@@ -20,7 +20,7 @@ async function fetchAndSaveParisAirQuality() {
 
     const airQuality = new db.airQuality({
       timestamp: new Date(),
-      ...pollution
+      pollution: { ...pollution }
     });
 
     await airQuality.save();

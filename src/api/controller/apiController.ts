@@ -38,7 +38,7 @@ class ApiController {
       if (mostPolluted) {
         const data = {
           datetime: mostPolluted.timestamp,
-          aquis: mostPolluted.pollution?.aquis,
+          aquis: mostPolluted.pollution?.aqius,
         }
 
         return responseHandler.successResponse(data, res);

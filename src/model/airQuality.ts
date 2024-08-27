@@ -4,8 +4,8 @@ const airQualitySchema = new mongoose.Schema({
   timestamp: Date,
   pollution: {
     ts: String,
-    aquis: Number,
-    minus: String,
+    aqius: Number,
+    mainus: String,
     aqicn: Number,
     maincn: String,
   }
