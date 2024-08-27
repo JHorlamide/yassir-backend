@@ -1,19 +1,16 @@
 ## Requirements
-
 To run this application, you will need:
 
 * Docker installed on your machine
 * A terminal or command prompt
 
 ## Installation
-
 To install this application, follow these steps:
 
 * Clone this repository to your machine: `git clone https://github.com/JHorlamide/yassir-backend.git`
 * Navigate to the project directory: `cd yassir-backend` and create your .env file following the .env.example file
 
 ## Running the Application
-
 To start the application use docker compose:
 
 * `docker-compose up --build`
@@ -24,14 +21,13 @@ To start the application use docker compose:
     ```
 
 ## Usage
-
 The API endpoints of this application are described below:
 
 * `GET /api/air-quality?latitude=''&longitude=''`: Returns the air quality for the given coordinate in the query parameters.
 * `GET /api/most-polluted`: Returns datetime(date and time) where the paris zone is the most polluted.
+* Full documentation can be found at: https://documenter.getpostman.com/view/8106031/2sAXjJ4siR
 
 ## Running Test
-
 To ensure the reliability and accuracy of the application, I have implemented a simple suite of tests. While these tests are not exhaustive, but they cover some critical aspects of the API implementation. To run the tests, use the following commands:
 
 * To run the tests in watch mode, use the command `npm run test:watch`.
